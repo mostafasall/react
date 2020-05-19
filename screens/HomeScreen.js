@@ -4,9 +4,12 @@ import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react
 import { ScrollView } from 'react-native-gesture-handler';
 
 import { MonoText } from '../components/StyledText';
+import { render } from 'react-dom';
 
 export default function HomeScreen() {
+  
   return (
+    
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         <View style={styles.welcomeContainer}>
@@ -23,7 +26,7 @@ export default function HomeScreen() {
         <View style={styles.getStartedContainer}>
           <DevelopmentModeNotice />
 
-          <Text style={styles.getStartedText}>Open up the code for this screen:</Text>
+          <Text style={styles.getStartedText}>Login:</Text>
 
           <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
             <MonoText>screens/HomeScreen.js</MonoText>
@@ -39,6 +42,7 @@ export default function HomeScreen() {
             <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
           </TouchableOpacity>
         </View>
+        
       </ScrollView>
 
       <View style={styles.tabBarInfoContainer}>
@@ -51,6 +55,8 @@ export default function HomeScreen() {
     </View>
   );
 }
+
+
 
 HomeScreen.navigationOptions = {
   header: null,

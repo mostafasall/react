@@ -4,6 +4,11 @@ import * as React from 'react';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
+import Register from '../screens/RegisterScreen';
+import Onboarding from '../screens/onboardingscreen';
+import Profile from '../screens/profile';
+import SimpleQuestion from '../screens/myquestions';
+import filters from '../screens/filters';
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';
@@ -25,14 +30,40 @@ export default function BottomTabNavigator({ navigation, route }) {
         }}
       />
       <BottomTab.Screen
-        name="Links"
-        component={LinksScreen}
+        name="Profile"
+        component={Profile}
         options={{
-          title: 'Resources',
+          title: 'Profile',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
         }}
       />
+       <BottomTab.Screen
+        name="Question"
+        component={SimpleQuestion}
+        options={{
+          title: 'Question',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-dolar" />,
+        }}
+      />
+       <BottomTab.Screen
+        name="filters"
+        component={filters}
+        options={{
+          title: 'filters',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-dolar" />,
+        }}
+      />
+      <BottomTab.Screen
+      
+      name="Profiles"
+      component={Onboarding}
+      options={{
+        title: 'onboardscreen',
+        tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="logo-yen" />,
+      }}
+    />
     </BottomTab.Navigator>
+    
   );
 }
 
@@ -42,7 +73,9 @@ function getHeaderTitle(route) {
   switch (routeName) {
     case 'Home':
       return 'How to get started';
-    case 'Links':
-      return 'Links to learn more';
+    case 'Profile':
+      return 'Mostafa salloum';
+      case 'Login':
+      return 'Login';
   }
 }

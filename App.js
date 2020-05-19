@@ -5,9 +5,13 @@ import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
+import RegisterScreen from './screens/RegisterScreen';
+import  HeaderHeight  from './constants/utils';
+import LoginScreen from './screens/LoginScreen';
+import Nav  from './navigation/nav';
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import useLinking from './navigation/useLinking';
+import Toke from './components/token';
 
 const Stack = createStackNavigator();
 
@@ -30,6 +34,8 @@ export default function App(props) {
         await Font.loadAsync({
           ...Ionicons.font,
           'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
+          'montserrat-regular': require('./assets/fonts/Montserrat-Regular.ttf'),
+      'montserrat-bold': require('./assets/fonts/Montserrat-Bold.ttf')
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service
@@ -47,14 +53,7 @@ export default function App(props) {
     return null;
   } else {
     return (
-      <View style={styles.container}>
-        {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-        <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
-          <Stack.Navigator>
-            <Stack.Screen name="Root" component={BottomTabNavigator} />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </View>
+      <Nav/>
     );
   }
 }
