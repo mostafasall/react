@@ -33,7 +33,8 @@ export default class SimpleQuestion extends React.Component {
     submitanswer(){
 
 
-// fetch.....
+// fetch......
+
 
 
 

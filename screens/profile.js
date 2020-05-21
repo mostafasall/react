@@ -235,6 +235,23 @@ constructor(props) {
         <ScrollView showsVerticalScrollIndicator={false}>
           <Block flex style={{ marginTop: 20 }}>
             <Block middle>
+
+
+            <Button
+            shadowless
+            style={styles.button}
+            color={nowTheme.COLORS.PRIMARY}
+            onPress={() =>  navigation.navigate('verified')}
+          >
+            <Text
+              style={{ fontFamily: 'montserrat-bold', fontSize: 14 }}
+              color={theme.COLORS.WHITE}
+            >
+            Get verified
+            </Text>
+          </Button>
+
+          
               <Text
                 style={{
                   color: '#2c2c2c',
