@@ -56,7 +56,14 @@
     "react-native-web": "~0.11.7",
     "react-navigation": "^4.3.9",
     "react-redux": "^7.2.0",
+<<<<<<< HEAD
     "react-router-native": "^5.2.0"
+=======
+    "react-router-native": "^5.2.0",
+    "expo-camera": "~8.2.0",
+    "expo-permissions": "~8.1.0",
+    "expo-image-picker": "~8.1.0"
+>>>>>>> 0974fa08e094ddd01917adbd1e50adec9006747e
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
