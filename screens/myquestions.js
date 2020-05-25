@@ -7,13 +7,18 @@ import { RadioButton } from 'react-native-paper';
 export default class SimpleQuestion extends React.Component {
   state={
     answer:0,
-    question:{1:'DO YOU LIKE DOGS',2:'DO YOU LIKE SUNSET',3:'DO YOU LIKE GAMES',4:'Finishh'},Q1:'',
+    
+    question:{1:'DO YOU LIKE DOGS',2:'DO YOU LIKE SUNSET',3:'DO YOU LIKE GAMES',4:'Finish'},Q1:'',
     Yes:0,No:0,
     checked: 'True',
     counter:1
 
   }
-
+ // if (this.state.counter>3){
+    //     this.setState.counter=1;
+    // }else{
+    //     this.setState.counter=this.state.counter+1
+    // }
 
   
    count() {
@@ -59,7 +64,7 @@ export default class SimpleQuestion extends React.Component {
 
     const { navigation } = this.props;
 
-    let message;
+    let messsage;
     if (this.state.counter>3) {
         return (<View style={styles.container}>
             <Text style={styles.header}>{this.state.question[this.state.counter]}</Text>

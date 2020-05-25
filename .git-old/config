@@ -1,0 +1,17 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/mostafasall/react.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[remote "master"]
+	url = https://github.com/mostafasall/react
+	fetch = +refs/heads/*:refs/remotes/master/*
+[remote "master1"]
+	url = https://github.com/mostafasall/react.git
+	fetch = +refs/heads/*:refs/remotes/master1/*
