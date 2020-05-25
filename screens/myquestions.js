@@ -7,7 +7,7 @@ import { RadioButton } from 'react-native-paper';
 export default class SimpleQuestion extends React.Component {
   state={
     answer:0,
-    question:{1:'DO YOU LIKE DOGS',2:'DO YOU LIKE SUNSET',3:'DO YOU LIKE GAMES',4:'Finish'},Q1:'',
+    question:{1:'DO YOU LIKE DOGS',2:'DO YOU LIKE SUNSET',3:'DO YOU LIKE GAMES',4:'Finishh'},Q1:'',
     Yes:0,No:0,
     checked: 'True',
     counter:1
@@ -33,7 +33,8 @@ export default class SimpleQuestion extends React.Component {
     submitanswer(){
 
 
-// fetch.....
+// fetch......
+
 
 
 

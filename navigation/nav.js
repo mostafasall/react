@@ -9,6 +9,8 @@ import onboardingscreen from '../screens/onboardingscreen';
 import BottomTabNavigator from '../navigation/BottomTabNavigator';
 import SimpleQuestion from '../screens/myquestions';
 import Profile from '../screens/profile';
+import verified from '../screens/verified';
+
 //import Quiz from "./screens/Quiz";
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 const Stack = createStackNavigator();
@@ -32,6 +34,7 @@ export default ()=>{
               <Stack.Screen name="LoginScreen" component={LoginScreen} />
               <Stack.Screen name="myquestions" component={SimpleQuestion} />
               <Stack.Screen name="Profile" component={Profile} />
+              <Stack.Screen name="verified" component={verified} />
             </Stack.Navigator>
           </NavigationContainer>
         </View>
